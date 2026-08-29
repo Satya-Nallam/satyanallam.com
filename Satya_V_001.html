@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Satya Nallam — Security Engineer & DevSecOps</title>
+<meta name="description" content="Security engineer and DevSecOps owner — securing GitLab CI/CD, ArgoCD GitOps, container registries, 500K+ daily events monitored, 150+ incidents resolved, 1,870 findings triaged.">
+<link rel="canonical" href="https://satyanallam.com/">
+<meta property="og:title" content="Satya Nallam — Security Engineer & DevSecOps">
+<meta property="og:description" content="Securing enterprise SOCs and engineering secure CI/CD pipelines — 6.5+ years across security operations and DevSecOps.">
+<meta property="og:url" content="https://satyanallam.com/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://satyanallam.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Satya Nallam — Security Engineer & DevSecOps">
+<meta name="twitter:description" content="Securing enterprise SOCs and engineering secure CI/CD pipelines.">
+<meta name="twitter:image" content="https://satyanallam.com/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Satya Nallam",
+  "jobTitle":"Security Engineer & DevSecOps",
+  "url":"https://satyanallam.com/",
+  "email":"mailto:nallamsatyasai@gmail.com",
+  "address":{"@type":"PostalAddress","addressLocality":"Hyderabad","addressCountry":"IN"},
+  "sameAs":["https://linkedin.com/in/satya-nallam","https://github.com/Satya-Nallam"]
+}
+</script>
+<style>
+:root{
+--ink:#0F172A;--blue:#2563EB;--blue-dark:#1D4ED8;--cyan:#06B6D4;--bg:#FFFFFF;--tint:#F8FAFC;
+--line-100:#F1F5F9;--line-200:#E2E8F0;--muted:#64748B;--slate-600:#475569;--slate-700:#334155;
+--emerald:#10B981;--emerald-50:#ECFDF5;--emerald-100:#D1FAE5;--emerald-700:#047857;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--slate-700);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;line-height:1.6}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+h1,h2,h3{color:var(--ink);margin:0}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+.container{max-width:1180px;margin:0 auto;padding:0 20px}
+@media(min-width:768px){.container{padding:0 32px}}
+.section{padding:56px 0}
+@media(min-width:768px){.section{padding:80px 0}}
+.section.tint{background:var(--tint);border-top:1px solid var(--line-100);border-bottom:1px solid var(--line-100)}
+.section-header{display:flex;align-items:center;gap:12px;margin-bottom:28px}
+.section-icon{width:36px;height:36px;border-radius:12px;border:1px solid var(--line-200);background:var(--bg);display:grid;place-items:center;flex:0 0 36px}
+.section-title{font-size:22px;font-weight:800;letter-spacing:-0.025em;white-space:nowrap}
+@media(min-width:768px){.section-title{font-size:28px}}
+.section-rule{height:1px;flex:1;background:linear-gradient(to right,#E2E8F0,transparent);margin-left:16px}
+
+/* status strip */
+.status-strip{background:var(--ink);color:#fff;font-size:12px;letter-spacing:0.025em;padding:10px 0;text-align:center;display:flex;align-items:center;justify-content:center;gap:8px}
+@media(min-width:768px){.status-strip{font-size:13px}}
+.dot-pulse{width:8px;height:8px;border-radius:999px;background:var(--emerald);box-shadow:0 0 0 0 rgba(16,185,129,.6);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(16,185,129,.6)}70%{box-shadow:0 0 0 8px rgba(16,185,129,0)}100%{box-shadow:0 0 0 0 rgba(16,185,129,0)}}
+
+/* header */
+.site-header{position:sticky;top:0;z-index:50;height:64px;background:rgba(255,255,255,.8);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--line-100)}
+.header-inner{height:64px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-tile{width:36px;height:36px;border-radius:12px;background:var(--ink);display:grid;place-items:center}
+.brand-text{line-height:1}
+.brand-name{font-size:15px;font-weight:800;letter-spacing:-0.025em;color:var(--ink)}
+.brand-role{font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.nav-desktop{display:none;align-items:center;gap:28px}
+@media(min-width:768px){.nav-desktop{display:flex}}
+.nav-link{font-size:13.5px;font-weight:500;color:var(--slate-600)}
+.nav-link:hover{color:var(--ink)}
+.btn-pill{height:36px;padding:0 16px;border-radius:999px;background:var(--blue);color:#fff;font-size:13px;font-weight:600;border:0;display:inline-flex;align-items:center;justify-content:center}
+.btn-pill:hover{background:var(--blue-dark)}
+.nav-mobile-btn{width:36px;height:36px;border-radius:999px;border:1px solid var(--line-200);background:#fff;display:grid;place-items:center}
+@media(min-width:768px){.nav-mobile-btn{display:none}}
+.mobile-panel{position:fixed;inset:64px 0 0 0;background:#fff;z-index:49;padding:20px;display:none;border-top:1px solid var(--line-100)}
+.mobile-panel.open{display:block}
+.mobile-panel a{display:block;padding:12px 0;font-size:14px;font-weight:500;border-bottom:1px solid var(--line-100)}
+
+/* hero */
+.hero{padding:40px 0 48px}
+@media(min-width:768px){.hero{padding:64px 0 80px}}
+.hero-grid{display:grid;gap:32px}
+@media(min-width:1024px){.hero-grid{grid-template-columns:1.15fr 0.85fr;gap:40px;align-items:start}}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:var(--tint);border:1px solid var(--line-200);font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--slate-600)}
+.eyebrow-dot{width:6px;height:6px;border-radius:999px;background:var(--blue)}
+.h1{font-size:34px;font-weight:800;line-height:0.95;letter-spacing:-0.025em;margin-top:18px}
+@media(min-width:768px){.h1{font-size:52px}}
+.h1 .blue{color:var(--blue)}
+.hero-sub{font-size:16px;font-weight:500;color:var(--slate-600);line-height:1.5;max-width:560px;margin-top:14px}
+@media(min-width:768px){.hero-sub{font-size:18px}}
+.hero-meta{display:flex;flex-wrap:wrap;gap:14px;margin-top:16px;font-size:13.5px;color:var(--muted)}
+.hero-meta span{display:inline-flex;align-items:center;gap:6px}
+.hero-actions{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
+.btn-primary{height:44px;padding:0 24px;border-radius:999px;background:var(--ink);color:#fff;font-size:14px;font-weight:600;border:0;display:inline-flex;align-items:center;gap:8px;box-shadow:0 8px 20px -10px rgba(0,0,0,.6)}
+.btn-secondary{height:44px;padding:0 24px;border-radius:999px;background:#fff;border:1px solid var(--line-200);font-size:14px;font-weight:600;display:inline-flex;align-items:center}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+@media(min-width:768px){.stats-grid{grid-template-columns:repeat(3,1fr)}}
+.stat-card{border-radius:16px;border:1px solid var(--line-100);background:var(--tint);padding:16px}
+.stat-bar{width:32px;height:6px;border-radius:999px;background:linear-gradient(90deg,var(--blue),var(--cyan))}
+.stat-num{font-size:22px;font-weight:800;color:var(--ink);margin-top:10px}
+.stat-label{font-size:11.5px;font-weight:500;letter-spacing:0.025em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+
+/* terminal */
+.terminal{border-radius:28px;background:var(--ink);border:1px solid #1E293B;box-shadow:0 20px 60px -20px rgba(15,23,42,.6);overflow:hidden;position:relative}
+.term-bar{height:44px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.1)}
+.term-dots{display:flex;gap:6px}
+.term-dot{width:10px;height:10px;border-radius:999px}
+.term-mono{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:0.1em;color:rgba(255,255,255,.5);text-transform:uppercase}
+.term-body{padding:24px}
+@media(min-width:768px){.term-body{padding:28px}}
+.term-head{display:flex;gap:12px;align-items:center;margin-bottom:16px}
+.term-shield{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,#2563EB,#06B6D4);display:grid;place-items:center;flex:0 0 48px}
+.term-kicker{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.term-title{font-size:18px;font-weight:700;color:#fff;margin-top:2px}
+.code{border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:12px;font-family:"JetBrains Mono",monospace;font-size:11px;line-height:1.6;color:rgba(255,255,255,.7);overflow:auto}
+.k{color:#67E8F9}.f{color:#FDE68A}.s{color:#6EE7B7}.fn{color:#C4B5FD}.c{color:rgba(255,255,255,.3)}
+.chips{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.chip-emerald{height:20px;padding:0 8px;border-radius:999px;background:rgba(52,211,153,.2);color:#6EE7B7;font-size:11px;display:inline-flex;align-items:center}
+.chip-blue{height:20px;padding:0 8px;border-radius:999px;background:rgba(96,165,250,.2);color:#93C5FD;font-size:11px;display:inline-flex;align-items:center}
+.term-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.metric{border-radius:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:10px;text-align:center}
+.metric-label{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+.metric-value{font-size:13px;font-weight:700;color:#fff;margin-top:2px}
+.term-side{display:none}
+@media(min-width:768px){.term-side{display:flex;flex-direction:column;gap:8px;margin-top:16px}.term-side-item{width:100%;height:44px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center}}
+.term-bottom{margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;font-family:"JetBrains Mono",monospace;font-size:10px;color:rgba(255,255,255,.3)}
+.orb{position:absolute;bottom:-80px;right:-80px;width:240px;height:240px;border-radius:999px;background:linear-gradient(135deg,rgba(37,99,235,.4),rgba(6,182,212,.3));filter:blur(40px);pointer-events:none}
+
+/* about */
+.about-grid{display:grid;gap:32px}
+@media(min-width:1024px){.about-grid{grid-template-columns:1.2fr 0.8fr}}
+.card-white{border-radius:20px;background:#fff;border:1px solid var(--line-100);padding:24px;box-shadow:0 8px 30px -20px rgba(0,0,0,.2)}
+@media(min-width:768px){.card-white{padding:32px}}
+.checklist{display:grid;grid-template-columns:1fr;gap:12px;margin-top:18px}
+@media(min-width:768px){.checklist{grid-template-columns:1fr 1fr}}
+.check-item{display:flex;gap:8px;font-size:13.5px;line-height:1.5}
+.card-dark{border-radius:20px;background:var(--ink);color:#fff;padding:24px}
+@media(min-width:768px){.card-dark{padding:28px}}
+.how-label{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:14px}
+.how-row{border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:14px;margin-bottom:10px}
+.how-key{font-size:12px;font-weight:700;color:#fff}
+.how-val{font-size:12.5px;color:rgba(255,255,255,.6);margin-top:4px}
+
+/* skills */
+.skills-grid{display:grid;gap:20px}
+@media(min-width:768px){.skills-grid{grid-template-columns:1fr 1fr}}
+.skill-card{border-radius:20px;background:#fff;border:1px solid var(--line-100);padding:24px;box-shadow:0 8px 30px -24px rgba(0,0,0,.3);transition:box-shadow .2s}
+.skill-card:hover{box-shadow:0 16px 40px -20px rgba(0,0,0,.25)}
+.skill-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.skill-icon{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--cyan))}
+.skill-title{font-size:14.5px;font-weight:700}
+.skill-count{height:24px;padding:0 10px;border-radius:999px;background:var(--tint);border:1px solid var(--line-100);font-size:11px}
+.skill-chips{display:flex;flex-wrap:wrap;gap:8px}
+.skill-chip{height:28px;padding:0 12px;border-radius:999px;background:var(--tint);border:1px solid var(--line-100);font-size:12px;font-weight:500;color:var(--slate-700);display:inline-flex;align-items:center}
+
+/* experience */
+.exp-wrap{position:relative;padding-left:48px}
+@media(min-width:768px){.exp-wrap{padding-left:56px}}
+.exp-line{position:absolute;left:15px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,#2563EB,#E2E8F0,transparent)}
+@media(min-width:768px){.exp-line{left:17px}}
+.exp-item{position:relative;margin-bottom:32px}
+.exp-node{position:absolute;left:-48px;top:8px;width:32px;height:32px;border-radius:999px;display:grid;place-items:center}
+@media(min-width:768px){.exp-node{left:-56px}}
+.node-current{background:var(--blue);border:4px solid #fff;box-shadow:0 0 0 1px rgba(37,99,235,.2)}
+.node-past{background:#fff;border:2px solid var(--line-200)}
+.exp-card{border-radius:20px;background:#fff;border:1px solid var(--line-100);padding:24px}
+@media(min-width:768px){.exp-card{padding:28px}}
+.exp-header{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.exp-role{font-size:17px;font-weight:800}
+.exp-loc{font-size:13px;color:var(--muted)}
+.chip-current{background:#EFF6FF;border:1px solid #DBEAFE;color:var(--blue);font-size:13px;font-weight:700;padding:4px 10px;border-radius:999px}
+.date-chip{height:30px;padding:0 12px;border-radius:999px;background:var(--tint);border:1px solid var(--line-200);font-family:"JetBrains Mono",monospace;font-size:12.5px;font-weight:600;display:inline-flex;align-items:center}
+.exp-summary{font-size:13px;font-weight:500;color:var(--muted);margin-top:6px}
+.exp-bullets{margin:14px 0 0 0;padding:0;list-style:none}
+.exp-bullets li{position:relative;padding-left:16px;font-size:13.5px;line-height:1.55;margin-bottom:8px}
+.exp-bullets li:before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:999px;background:#CBD5E1}
+.exp-bullets li b{color:var(--ink)}
+.exp-compact{padding:16px 20px;border-radius:16px;background:#fff;border:1px solid var(--line-100);font-size:13.5px}
+
+/* projects */
+.proj-grid{display:grid;gap:20px}
+@media(min-width:768px){.proj-grid{grid-template-columns:1fr 1fr}}
+.proj-card{border-radius:20px;background:#fff;border:1px solid var(--line-100);overflow:hidden}
+.proj-bar{height:6px;background:linear-gradient(90deg,var(--blue),var(--cyan),var(--emerald))}
+.proj-body{padding:24px}
+@media(min-width:768px){.proj-body{padding:28px}}
+.proj-title{font-size:16px;font-weight:800;line-height:1.25;display:flex;justify-content:space-between;gap:12px}
+.proj-icon{width:32px;height:32px;border-radius:999px;background:var(--tint);border:1px solid var(--line-100);display:grid;place-items:center;flex:0 0 32px}
+.proj-desc{font-size:13.5px;line-height:1.6;color:var(--slate-600);margin-top:10px}
+.outcomes{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.outcome{height:28px;padding:0 12px;border-radius:999px;background:var(--emerald-50);border:1px solid var(--emerald-100);color:var(--emerald-700);font-size:11.5px;font-weight:600;display:inline-flex;align-items:center}
+.stack{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px}
+.stack-chip{height:24px;padding:0 10px;border-radius:999px;background:var(--tint);border:1px solid var(--line-100);font-size:11px}
+
+/* certs */
+.certs-grid{display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:600px){.certs-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1024px){.certs-grid{grid-template-columns:repeat(4,1fr)}}
+.cert-card{border-radius:18px;background:#fff;border:1px solid var(--line-100);padding:20px}
+.cert-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.cert-brand{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;color:#fff}
+.cert-verified{height:24px;padding:0 10px;border-radius:999px;background:var(--emerald-50);border:1px solid var(--emerald-100);color:var(--emerald-700);font-size:10.5px;font-weight:700;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px}
+.cert-name{font-size:13.5px;font-weight:700;line-height:1.3}
+.cert-valid{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--muted);margin-top:6px}
+.cert-issuer{font-size:11.5px;font-weight:600;color:#94A3B8;margin-top:4px}
+.cert-id{font-family:"JetBrains Mono",monospace;font-size:10px;color:#94A3B8;margin-top:4px;word-break:break-all}
+
+/* education */
+.edu-grid{display:grid;gap:16px}
+@media(min-width:768px){.edu-grid{grid-template-columns:1fr 1fr}}
+.edu-card{border-radius:18px;background:#fff;border:1px solid var(--line-100);padding:24px;display:flex;justify-content:space-between;gap:16px}
+.edu-degree{font-size:14px;font-weight:800}
+.edu-school{font-size:13px;color:var(--slate-600);margin-top:4px}
+.edu-meta{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
+.edu-chip{font-size:11px;padding:4px 8px;border-radius:999px;background:var(--tint);border:1px solid var(--line-100)}
+.edu-cap{width:40px;height:40px;border-radius:12px;background:var(--ink);display:grid;place-items:center;flex:0 0 40px}
+
+/* contact */
+.contact-section{background:var(--ink);color:#fff;padding:48px 0}
+@media(min-width:768px){.contact-section{padding:64px 0}}
+.contact-grid{display:grid;gap:40px}
+@media(min-width:1024px){.contact-grid{grid-template-columns:1.1fr 0.9fr}}
+.contact-pill{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1);font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase}
+.contact-h2{font-size:28px;font-weight:800;line-height:.95;margin-top:16px;color:#fff}
+@media(min-width:768px){.contact-h2{font-size:36px}}
+.contact-p{font-size:14px;line-height:1.6;color:rgba(255,255,255,.6);max-width:460px;margin-top:12px}
+.contact-rows{display:grid;gap:10px;margin-top:20px}
+.contact-row{height:48px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:0 16px;display:flex;align-items:center;justify-content:space-between;font-size:13.5px}
+.socials{display:flex;gap:10px;margin-top:18px}
+.social-btn{width:40px;height:40px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);display:grid;place-items:center}
+.contact-card{background:#fff;color:var(--ink);border-radius:20px;padding:24px}
+@media(min-width:768px){.contact-card{padding:28px}}
+.working-label{font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.working-row{border-radius:12px;background:var(--tint);border:1px solid var(--line-100);padding:14px;margin-bottom:10px}
+.working-title{font-size:13px;font-weight:700}
+.working-text{font-size:12.5px;color:var(--slate-600);margin-top:4px}
+.facts-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}
+.fact{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--muted)}
+
+.footer-bar{margin-top:48px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-family:"JetBrains Mono",monospace;font-size:11.5px;color:rgba(255,255,255,.4)}
+
+.reveal{opacity:0;transform:translateY(12px);transition:opacity .4s ease,transform .4s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.dot-pulse{animation:none}}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="status-strip"><span class="dot-pulse"></span> Security engineering & DevSecOps · Hyderabad, India · currently at Human Managed</div>
+<header class="site-header">
+<div class="container header-inner">
+<div class="brand">
+<div class="brand-tile"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+<div class="brand-text"><div class="brand-name">SATYA NALLAM</div><div class="brand-role">Security Engineer</div></div>
+</div>
+<nav class="nav-desktop"><a class="nav-link" href="#about">About</a><a class="nav-link" href="#skills">Skills</a><a class="nav-link" href="#experience">Experience</a><a class="nav-link" href="#projects">Projects</a><a class="nav-link" href="#certifications">Certifications</a><a class="nav-link" href="#contact">Contact</a><a class="btn-pill" href="#contact">Contact</a></nav>
+<button class="nav-mobile-btn" id="menuBtn" aria-label="Open menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div>
+</header>
+<div class="mobile-panel" id="mobilePanel"><a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#certifications">Certifications</a><a href="#contact">Contact</a></div>
+
+<main>
+<section class="section hero" id="top">
+<div class="container hero-grid">
+<div>
+<div class="eyebrow"><span class="eyebrow-dot"></span> Security Engineer · DevSecOps</div>
+<h1 class="h1">SATYA<br><span class="blue">NALLAM</span></h1>
+<p class="hero-sub">Securing enterprise SOCs and engineering secure CI/CD pipelines — 6.5+ years across security operations and DevSecOps.</p>
+<div class="hero-meta"><span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Hyderabad, India — remote</span><span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg> nallamsatyasai@gmail.com</span></div>
+<div class="hero-actions"><a class="btn-primary" href="/satya-nallam-resume.pdf" download>Download Resume <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></a><a class="btn-secondary" href="#contact">Get in touch</a></div>
+<div class="stats-grid">
+<div class="stat-card"><div class="stat-bar"></div><div class="stat-num">500K+</div><div class="stat-label">daily events monitored</div></div>
+<div class="stat-card"><div class="stat-bar"></div><div class="stat-num">150+</div><div class="stat-label">incidents resolved</div></div>
+<div class="stat-card"><div class="stat-bar"></div><div class="stat-num">1,870</div><div class="stat-label">findings triaged</div></div>
+<div class="stat-card"><div class="stat-bar"></div><div class="stat-num">35%</div><div class="stat-label">false-positive reduction</div></div>
+<div class="stat-card"><div class="stat-bar"></div><div class="stat-num">45%</div><div class="stat-label">MTTD reduction</div></div>
+<div class="stat-card"><div class="stat-bar"></div><div class="stat-num">60%</div><div class="stat-label">manual effort automated</div></div>
+</div>
+</div>
+<div class="terminal">
+<div class="term-bar"><div class="term-dots"><span class="term-dot" style="background:#F87171"></span><span class="term-dot" style="background:#FCD34D"></span><span class="term-dot" style="background:#34D399"></span></div><div class="term-mono">sentinel_live.kql — SecOps</div><div style="display:flex;gap:8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></div></div>
+<div class="term-body">
+<div class="term-head"><div class="term-shield"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><div class="term-kicker">Active Detection</div><div class="term-title">Impossible Travel + Secret Scan</div></div></div>
+<pre class="code"><span class="c">// detect impossible travel + secret in MR</span>
+<span class="k">SigninLogs</span>
+| <span class="fn">where</span> <span class="f">ResultType</span> == <span class="s">0</span>
+| <span class="fn">extend</span> <span class="f">geo</span> = <span class="fn">parse_json</span>(<span class="f">LocationDetails</span>)
+| <span class="k">summarize</span> <span class="f">dcount</span>(<span class="f">geo.country</span>) <span class="k">by</span> <span class="f">UserPrincipalName</span>, <span class="f">bin</span>(<span class="f">TimeGenerated</span>, <span class="s">10m</span>)
+| <span class="k">where</span> <span class="f">dcount_geo_country</span> &gt; <span class="s">1</span>
+<span class="c">// secret detection: GitLab secret push protection</span></pre>
+<div class="chips"><span class="chip-emerald">● live — 4 matches</span><span class="chip-blue">MITRE T1078 · T1552.001</span></div>
+<div class="term-metrics"><div class="metric"><div class="metric-label">Repo Coverage</div><div class="metric-value">8+ repos</div></div><div class="metric"><div class="metric-label">Alerts / Day</div><div class="metric-value">100+</div></div><div class="metric"><div class="metric-label">SLA Breaches</div><div class="metric-value">0 critical</div></div></div>
+<div class="term-side"><div class="term-side-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="term-side-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg></div><div class="term-side-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div><div class="term-side-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div></div>
+<div class="term-bottom"><span>sentinel :: 12:44:09 IST · auto-triaged</span><span><span style="display:inline-block;width:6px;height:6px;background:var(--emerald);border-radius:999px;margin-right:6px"></span>42ms p95</span></div>
+</div>
+<div class="orb"></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section tint" id="about">
+<div class="container">
+<div class="section-header"><div class="section-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/></svg></div><h2 class="section-title">About</h2><div class="section-rule"></div></div>
+<div class="about-grid reveal">
+<div class="card-white"><p style="font-size:15px;line-height:1.7;margin:0">Security engineer and DevSecOps owner at Human Managed, a managed security services provider — securing GitLab CI/CD pipelines, ArgoCD GitOps and container registries across 8+ product repos, running vulnerability management org-wide, and driving SOC 2, ISO 27001 and ISO 42001 work. Before that, 24x7 SOC operations at TCS across Microsoft Sentinel, Google SecOps, Splunk, CrowdStrike and SentinelOne. I build security into engineering pipelines instead of adding it at the end.</p>
+<div class="checklist">
+<div class="check-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="2" style="flex:0 0 16px;margin-top:2px"><path d="M20 6L9 17l-5-5"/></svg><span>Built AI-assisted triage that cut investigation time 40% and MTTD 45%</span></div>
+<div class="check-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="2" style="flex:0 0 16px;margin-top:2px"><path d="M20 6L9 17l-5-5"/></svg><span>Tuned MITRE-mapped SIEM detections, 35% fewer false positives</span></div>
+<div class="check-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="2" style="flex:0 0 16px;margin-top:2px"><path d="M20 6L9 17l-5-5"/></svg><span>Took over DevSecOps solo and cleared a 1,870-finding backlog</span></div>
+<div class="check-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="2" style="flex:0 0 16px;margin-top:2px"><path d="M20 6L9 17l-5-5"/></svg><span>Mentored 4 junior analysts, 5/5 performance rating at TCS</span></div>
+</div>
+</div>
+<div class="card-dark"><div class="how-label">How I Work</div>
+<div class="how-row"><div class="how-key">Detection engineering</div><div class="how-val">KQL, MITRE ATT&CK, correlation, tuning for signal not noise.</div></div>
+<div class="how-row"><div class="how-key">Automation first</div><div class="how-val">Python and platform APIs; if I do it twice, I script it.</div></div>
+<div class="how-row"><div class="how-key">Shift left</div><div class="how-val">Security gates inside the pipeline, with fixes written for developers.</div></div>
+<div class="how-row"><div class="how-key">Evidence over assertion</div><div class="how-val">Compliance controls backed by real monitoring evidence.</div></div>
+<div class="how-row"><div class="how-key">Incident command</div><div class="how-val">P1/P2 handling, containment, and a written runbook afterwards.</div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="skills">
+<div class="container">
+<div class="section-header"><div class="section-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a1 1 0 0 0 0-1.4l-1.6-1.6a1 1 0 0 0-1.4 0l-3.8 3.8z"/><path d="M5 21l2-2"/><path d="M10 14l-3 3"/><path d="M18 2l4 4"/></svg></div><h2 class="section-title">Skills</h2><div class="section-rule"></div></div>
+<div class="skills-grid">
+<div class="skill-card reveal"><div class="skill-top"><div style="display:flex;align-items:center;gap:12px"><div class="skill-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="skill-title">SIEM, SOC & Detection Engineering</div></div><span class="skill-count">11 skills</span></div><div class="skill-chips"><span class="skill-chip">Microsoft Sentinel</span><span class="skill-chip">Google SecOps</span><span class="skill-chip">Splunk</span><span class="skill-chip">M365 Defender</span><span class="skill-chip">KQL</span><span class="skill-chip">MITRE ATT&CK</span><span class="skill-chip">Detection Engineering</span><span class="skill-chip">Incident Response</span><span class="skill-chip">Logging & Monitoring</span><span class="skill-chip">Alert Correlation</span><span class="skill-chip">Security Dashboards</span></div></div>
+<div class="skill-card reveal"><div class="skill-top"><div style="display:flex;align-items:center;gap:12px"><div class="skill-icon" style="background:linear-gradient(135deg,#0F172A,#334155)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11v2"/></svg></div><div class="skill-title">DevSecOps & CI/CD Security</div></div><span class="skill-count">10 skills</span></div><div class="skill-chips"><span class="skill-chip">GitLab CI/CD</span><span class="skill-chip">SAST</span><span class="skill-chip">SCA</span><span class="skill-chip">Secret Scanning</span><span class="skill-chip">Dependency Scanning</span><span class="skill-chip">Container Security</span><span class="skill-chip">ArgoCD</span><span class="skill-chip">GitOps</span><span class="skill-chip">Kubernetes</span><span class="skill-chip">Harbor</span></div></div>
+<div class="skill-card reveal"><div class="skill-top"><div style="display:flex;align-items:center;gap:12px"><div class="skill-icon" style="background:linear-gradient(135deg,#06B6D4,#2563EB)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div><div class="skill-title">Cloud, Infrastructure & Endpoint</div></div><span class="skill-count">10 skills</span></div><div class="skill-chips"><span class="skill-chip">Azure Security</span><span class="skill-chip">Google Cloud Security</span><span class="skill-chip">IAM</span><span class="skill-chip">System Hardening</span><span class="skill-chip">Zscaler</span><span class="skill-chip">Endpoint Security</span><span class="skill-chip">EDR/XDR</span><span class="skill-chip">CrowdStrike</span><span class="skill-chip">SentinelOne</span><span class="skill-chip">Trellix</span></div></div>
+<div class="skill-card reveal"><div class="skill-top"><div style="display:flex;align-items:center;gap:12px"><div class="skill-icon" style="background:linear-gradient(135deg,#10B981,#06B6D4)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div><div class="skill-title">Vulnerability, Compliance & Automation</div></div><span class="skill-count">11 skills</span></div><div class="skill-chips"><span class="skill-chip">Vulnerability Management</span><span class="skill-chip">CVE Triage</span><span class="skill-chip">CVSS</span><span class="skill-chip">CISA KEV</span><span class="skill-chip">SOC 2</span><span class="skill-chip">ISO 27001</span><span class="skill-chip">ISO 42001</span><span class="skill-chip">Vanta</span><span class="skill-chip">Risk Assessment</span><span class="skill-chip">Python</span><span class="skill-chip">Bash</span></div></div>
+</div>
+</div>
+</section>
+
+<section class="section tint" id="experience">
+<div class="container">
+<div class="section-header"><div class="section-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div><h2 class="section-title">Experience</h2><div class="section-rule"></div></div>
+<div class="exp-wrap">
+<div class="exp-line"></div>
+
+<div class="exp-item reveal"><div class="exp-node node-current"><div style="width:8px;height:8px;background:#fff;border-radius:999px"></div></div><div class="exp-card"><div class="exp-header"><div><div style="display:flex;align-items:center;gap:8px"><span class="chip-current">Current</span><span class="exp-loc">Remote</span></div><div class="exp-role">Human Managed — CyberOps Analyst | DevSecOps Engineer</div><div class="exp-summary">Own DevSecOps across 8+ product repos, plus 24x7 multi-tenant SOC coverage</div></div><span class="date-chip mono">04/2025 to Present</span></div><ul class="exp-bullets"><li>Own DevSecOps for the organisation after a senior engineer's exit: GitLab CI/CD, ArgoCD GitOps, container registries and pipeline scanning across <b>8+ product repos</b>.</li><li>Run GitLab security scanning (SAST, secret detection, SCA, container); triaged a backlog of ~<b>1,870 findings</b> and cleared every critical SLA breach.</li><li>Built an SLA-tracked vulnerability management process on the GitLab API with Slack escalation to remediation owners.</li><li>Administer GitLab security controls: access reviews, offboarding, permissions, CODEOWNERS, protected branches, MR approval rules, CI token rotation.</li><li>Operate ArgoCD GitOps for Kubernetes delivery and manage the Harbor registry including supply-chain review and image scanning.</li><li>Drive compliance remediation in Vanta across <b>SOC 2, ISO 27001 and ISO 42001</b>.</li><li>Analyse <b>100+ daily alerts</b> across Sentinel, Google SecOps, Splunk, CrowdStrike, SentinelOne and Trellix, end to end.</li><li>Tune MITRE-mapped SIEM detections for <b>35% fewer false positives</b>; AI-assisted triage cut investigation time <b>40%</b> and MTTD <b>45%</b>.</li><li>Automate incident response and reporting in Python — <b>60% less manual effort</b>, reports from hours to minutes.</li></ul></div></div>
+
+<div class="exp-item reveal"><div class="exp-node node-past"><div style="width:10px;height:10px;background:#94A3B8;border-radius:999px"></div></div><div class="exp-card"><div class="exp-header"><div><div class="exp-role">Tata Consultancy Services — SOC Analyst</div><div class="exp-summary">24x7 enterprise SOC monitoring and incident response</div></div><span class="date-chip mono">03/2022 to 03/2025</span></div><ul class="exp-bullets"><li>Monitored <b>500K+ daily security events</b> across Microsoft Sentinel, M365 Defender and SentinelOne.</li><li>Investigated and resolved <b>150+ incidents</b>: malware, credential compromise, unauthorised access, data breach investigations.</li><li>Improved detection efficiency <b>25%</b> through KQL development, threat intel analysis and CVE triage.</li><li>Cut false positives <b>30%</b> via alert correlation, tuning and behavioural analysis.</li><li>Mentored <b>4 junior analysts</b>; 5/5 performance rating and an On-the-Spot Award for critical incident management.</li></ul></div></div>
+
+<div class="exp-item reveal"><div class="exp-node node-past"><div style="width:10px;height:10px;background:#94A3B8;border-radius:999px"></div></div><div class="exp-compact"><div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap"><div><b>Grama Ward Sachivalayam — Panchayat Secretary Grade VI, Digital Assistant</b><div style="font-size:12.5px;color:var(--muted);margin-top:2px">Kothapeta — Digital governance platforms and confidential records for 3,000+ citizens</div></div><span class="date-chip mono" style="height:28px">11/2019 to 02/2022</span></div></div></div>
+
+</div>
+</div>
+</section>
+
+<section class="section" id="projects">
+<div class="container">
+<div class="section-header"><div class="section-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div><h2 class="section-title">Projects</h2><div class="section-rule"></div></div>
+<div class="proj-grid">
+<div class="proj-card reveal"><div class="proj-bar"></div><div class="proj-body"><div class="proj-title"><span>AI-Assisted CI/CD Security Scanning Pipeline</span><span class="proj-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span></div><div class="proj-desc">Semgrep SAST inside GitLab CI with AI-assisted triage, so scans run on every merge request and developers get remediation guidance in the MR itself.</div><div class="outcomes"><span class="outcome">1,870 findings triaged</span><span class="outcome">zero critical SLA breaches</span><span class="outcome">Slack auto-escalation</span></div><div class="stack"><span class="stack-chip">GitLab CI</span><span class="stack-chip">Semgrep</span><span class="stack-chip">Python</span><span class="stack-chip">Slack API</span></div></div></div>
+<div class="proj-card reveal"><div class="proj-bar" style="background:linear-gradient(90deg,#06B6D4,#2563EB)"></div><div class="proj-body"><div class="proj-title"><span>AI SOC Analyst Agent</span><span class="proj-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg></span></div><div class="proj-desc">An alert-triage agent on Azure AI Foundry that enriches alerts and does first-pass analysis, standardising triage quality across the team.</div><div class="outcomes"><span class="outcome">40% faster investigations</span><span class="outcome">45% lower MTTD</span><span class="outcome">team workshop delivered</span></div><div class="stack"><span class="stack-chip">Azure AI Foundry</span><span class="stack-chip">Sentinel</span><span class="stack-chip">KQL</span><span class="stack-chip">Python</span></div></div></div>
+<div class="proj-card reveal"><div class="proj-bar" style="background:linear-gradient(90deg,#10B981,#06B6D4)"></div><div class="proj-body"><div class="proj-title"><span>SLA-Tracked Vulnerability Management</span><span class="proj-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span></div><div class="proj-desc">A GitLab API service that tracks every finding against its SLA and escalates to the owning team in Slack before it breaches.</div><div class="outcomes"><span class="outcome">org-wide coverage</span><span class="outcome">owner-routed</span><span class="outcome">breach-free</span></div><div class="stack"><span class="stack-chip">GitLab API</span><span class="stack-chip">Python</span><span class="stack-chip">Slack</span></div></div></div>
+<div class="proj-card reveal"><div class="proj-bar" style="background:linear-gradient(90deg,#0F172A,#475569)"></div><div class="proj-body"><div class="proj-title"><span>Internal Web Tools</span><span class="proj-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></span></div><div class="proj-desc">A timesheet and leave app, and a security-tooling survey app with an executive report, both shipped solo end to end.</div><div class="outcomes"><span class="outcome">used by the team</span><span class="outcome">built solo</span><span class="outcome">shipped in days</span></div><div class="stack"><span class="stack-chip">React</span><span class="stack-chip">Supabase</span><span class="stack-chip">Cloudflare Pages</span></div></div></div>
+</div>
+</div>
+</section>
+
+<section class="section tint" id="certifications">
+<div class="container">
+<div class="section-header"><div class="section-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div><h2 class="section-title">Certifications</h2><div class="section-rule"></div></div>
+<div class="certs-grid">
+<div class="cert-card reveal"><div class="cert-top"><div class="cert-brand" style="background:#0078D4"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="2" width="9" height="9"/><rect x="13" y="2" width="9" height="9"/><rect x="2" y="13" width="9" height="9"/><rect x="13" y="13" width="9" height="9"/></svg></div><span class="cert-verified"><span style="width:6px;height:6px;background:var(--emerald);border-radius:999px"></span>Verified</span></div><div class="cert-name">Microsoft Certified: Security Operations Analyst Associate</div><div class="cert-valid mono">09/2025 to 09/2027</div><div class="cert-issuer">Microsoft</div><div class="cert-id mono">ID DB4AB93DF65509F7</div></div>
+<div class="cert-card reveal"><div class="cert-top"><div class="cert-brand" style="background:#4285F4"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2a10 10 0 0 1 10 10H2A10 10 0 0 1 12 2z"/><path d="M12 22a10 10 0 0 0 10-10H2a10 10 0 0 0 10 10z"/></svg></div><span class="cert-verified"><span style="width:6px;height:6px;background:var(--emerald);border-radius:999px"></span>Verified</span></div><div class="cert-name">Google Cloud Certified Professional Security Operations Engineer</div><div class="cert-valid mono">10/2025 to 10/2027</div><div class="cert-issuer">Google Cloud</div><div class="cert-id mono">ID 254be7ec00914aeeb0f7ed78d1e0bbbc</div></div>
+<div class="cert-card reveal"><div class="cert-top"><div class="cert-brand" style="background:#0F172A"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span class="cert-verified"><span style="width:6px;height:6px;background:var(--emerald);border-radius:999px"></span>Verified</span></div><div class="cert-name">Certified Cybersecurity Educator Professional (CCEP)</div><div class="cert-valid mono">11/2025 to 08/2026</div><div class="cert-issuer">Red Team Leaders</div><div class="cert-id mono">Credential on file</div></div>
+<div class="cert-card reveal"><div class="cert-top"><div class="cert-brand" style="background:#00B2A9"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg></div><span class="cert-verified"><span style="width:6px;height:6px;background:var(--emerald);border-radius:999px"></span>Verified</span></div><div class="cert-name">Proofpoint Certified AI Email Security Specialist</div><div class="cert-valid mono">09/2025 to 09/2027</div><div class="cert-issuer">Proofpoint</div><div class="cert-id mono">Verified credential</div></div>
+</div>
+</div>
+</section>
+
+<section class="section" id="education">
+<div class="container">
+<div class="section-header"><div class="section-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2"><path d="M22 10v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-6"/><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg></div><h2 class="section-title">Education</h2><div class="section-rule"></div></div>
+<div class="edu-grid">
+<div class="edu-card reveal"><div><div class="edu-degree">B.Tech, Electrical & Electronics Engineering</div><div class="edu-school">Aditya University (JNTUK), Surampalem</div><div class="edu-meta"><span class="edu-chip">Full-time</span><span class="edu-chip mono">06/2016 to 05/2019</span></div></div><div class="edu-cap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div></div>
+<div class="edu-card reveal"><div><div class="edu-degree">Diploma, Electrical & Electronics Engineering</div><div class="edu-school">Aditya Polytechnic, Surampalem</div><div class="edu-meta"><span class="edu-chip">Diploma</span><span class="edu-chip mono">06/2013 to 05/2016</span></div></div><div class="edu-cap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div></div>
+</div>
+</div>
+</section>
+
+<section class="contact-section" id="contact">
+<div class="container">
+<div class="contact-grid">
+<div class="reveal">
+<div class="contact-pill"><span style="width:6px;height:6px;background:var(--emerald);border-radius:999px;display:inline-block;animation:pulse 2s infinite"></span> Open to interesting problems</div>
+<h2 class="contact-h2">Let's build something secure.</h2>
+<p class="contact-p">Security engineer who ships detection and DevSecOps that developers actually use. If you're working on SOC modernisation, pipeline security, or compliance that needs real evidence — let's talk.</p>
+<div class="contact-rows">
+<div class="contact-row"><span style="display:flex;align-items:center;gap:10px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg> nallamsatyasai@gmail.com</span><a href="mailto:nallamsatyasai@gmail.com" style="font-size:11px;letter-spacing:0.05em;color:rgba(255,255,255,.5)">COPY</a></div>
+<div class="contact-row"><span style="display:flex;align-items:center;gap:10px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Hyderabad, India — remote</span><span style="font-size:11px;color:rgba(255,255,255,.5)">IST</span></div>
+<div class="contact-row"><span style="display:flex;align-items:center;gap:10px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> usually replies within a day</span><span style="font-size:11px;color:rgba(255,255,255,.5)">~24h</span></div>
+</div>
+<div class="socials"><a class="social-btn" href="https://linkedin.com/in/satya-nallam" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><a class="social-btn" href="https://github.com/Satya-Nallam" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.3 6.3-1.5 6.3-6.9a5.4 5.4 0 0 0-1.5-3.8 5 5 0 0 0-.1-3.8s-1.2-.3-4 1.5a13.9 13.9 0 0 0-7 0C5.7 2.7 4.5 3 4.5 3A5 5 0 0 0 4.4 6.8a5.4 5.4 0 0 0-1.5 3.8c0 5.4 3.2 6.6 6.3 6.9a3.4 3.4 0 0 0-.9 2.6V21"/></svg></a><a class="social-btn" href="mailto:nallamsatyasai@gmail.com"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg></a></div>
+</div>
+<div class="contact-card reveal">
+<div class="working-label">What I'm Working On</div>
+<div class="working-row"><div class="working-title">SLA-tracked vulnerability management</div><div class="working-text">Across every product repo, with Slack escalation before breach.</div></div>
+<div class="working-row"><div class="working-title">Closing SOC 2, ISO 27001 and ISO 42001 gaps</div><div class="working-text">Control gaps in Vanta — access, change control, monitoring evidence.</div></div>
+<div class="working-row"><div class="working-title">Detection tuning</div><div class="working-text">Drops false positives without losing coverage, MITRE-mapped.</div></div>
+<div class="facts-grid"><div class="fact">8+ repos secured</div><div class="fact">100+ alerts/day</div><div class="fact">1,870 findings triaged</div><div class="fact">6.5+ years</div></div>
+</div>
+</div>
+<div class="footer-bar"><span>© 2026 Satya Nallam — built and deployed by me · satyanallam.com</span><span>Hyderabad, India · IST</span></div>
+</div>
+</section>
+</main>
+
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const mobilePanel=document.getElementById('mobilePanel');
+if(menuBtn){menuBtn.addEventListener('click',()=>{mobilePanel.classList.toggle('open')})}
+document.querySelectorAll('.mobile-panel a').forEach(a=>a.addEventListener('click',()=>mobilePanel.classList.remove('open')));
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');observer.unobserve(e.target)}})},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+document.querySelectorAll('section[id]').forEach(s=>s.style.scrollMarginTop='80px');
+</script>
+</body>
+</html>
